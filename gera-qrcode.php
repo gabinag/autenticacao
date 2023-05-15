@@ -22,6 +22,6 @@ $secret = 'XOR34TFSE49FCERGV';
 </head>
 <body>
     <h1>Escaneie o QrCode gerado:</h1>
-    <img src="<?php echo $g->getUrl('girlpower', 'autenticacao2fatores.vercel.app', $secret)?>">
+    <img src="<?php echo $g->getUrl('girlpower', 'autenticacao-token.vercel.app', $secret)?>">
 </body>
 </html>
