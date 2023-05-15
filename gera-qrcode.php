@@ -10,6 +10,10 @@ $g = new \Google\Authenticator\GoogleAuthenticator();
 //criar uma chave secret
 $secret = 'XOR34TFSE49FCERGV';
 
+if (isset($_POST['botao'])) {
+    header("Location: autenticar.php");
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -22,6 +26,10 @@ $secret = 'XOR34TFSE49FCERGV';
 </head>
 <body>
     <h1>Escaneie o QrCode gerado:</h1>
-    <img src="<?php echo $g->getUrl('girlpower', 'autenticacao-token.vercel.app', $secret)?>">
+    <img src="<?php echo $g->getUrl('girlpower', 'autenticacao-token.com', $secret)?>">
+    <form method="post" action="autenticar.php">
+		<input type="submit" name="botao" value="Ir para página">
+	</form>
+
 </body>
 </html>
