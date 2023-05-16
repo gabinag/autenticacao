@@ -11,14 +11,13 @@ $g = new \Google\Authenticator\GoogleAuthenticator();
 $secret = 'JBSWY3DPEHPK3PXP';
 
 //validar o token submetido
-if(isset($POST['token'])) {
+if(isset($_POST['token'])) {
     $token = $_POST['token'];
     if($g->checkCode($secret, $token)){
-        echo "<script>alert('Autenticação liberada!');</script>";
+        echo "<p style='color: green;'>Autenticação liberada!</p>";
     } else {
-        echo "<script>alert('Token inválido ou expirado');</script>";
+        echo "<p style='color: red;'>Token inválido ou expirado</p>";
     }
-    die();
 }
 
 ?>
@@ -88,7 +87,7 @@ if(isset($POST['token'])) {
 		<form method="post">
 			<div class="input-group">
 				<label for="token">Informe o token de autenticação recebido pelo Google Authenticator:</label>
-				<input type="text" id="token" name="token" required>
+				<input type="text" name="token" required>
 			</div>
 			<button type="submit" class="btn">Autenticar</button>
 		</form>

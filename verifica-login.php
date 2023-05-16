@@ -10,7 +10,7 @@ if ($email == 'teste@teste.com' && $senha == '1234') {
   exit;
 } else {
   // Se as credenciais estiverem incorretas, exibir a mensagem de erro
-  echo "<script>alert('Erro! E-mail e/ou senha incorretos.');</script>";
+  echo "<p style='color: red;'>Erro! Senha e/ou e-mail incorreto</p>";
 }
 ?>
 
