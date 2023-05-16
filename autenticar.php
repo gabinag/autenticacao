@@ -8,7 +8,7 @@ include_once('vendor/sonata-project/google-authenticator/src/GoogleQrUrl.php');
 $g = new \Google\Authenticator\GoogleAuthenticator();
 
 //criar uma chave secret
-$secret = 'XOR34TFSE49FCERGV';
+$secret = 'JBSWY3DPEHPK3PXP';
 
 //validar o token submetido
 if(isset($POST['token'])) {
