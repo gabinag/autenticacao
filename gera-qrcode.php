@@ -26,7 +26,7 @@ if (isset($_POST['botao'])) {
 </head>
 <body>
     <h1>Escaneie o QrCode gerado:</h1>
-    <img src="<?php echo $g->getUrl('autenticacao-token', 'autenticacao-token.azurewebsites.net', $secret)?>">
+    <img src="<?php echo $g->getUrl('autenticacao-2fatores', 'autenticacao-2fatores.azurewebsites.net', $secret)?>">
     <form method="post" action="autenticar.php">
 		<input type="submit" name="botao" value="Ir para página">
 	</form>
