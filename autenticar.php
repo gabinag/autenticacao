@@ -14,9 +14,9 @@ $secret = 'JBSWY3DPEHPK3PXP';
 if(isset($POST['token'])) {
     $token = $_POST['token'];
     if($g->checkCode($secret, $token)){
-        echo 'Autenticação liberada!';
+        echo "<script>alert('Autenticação liberada!');</script>";
     } else {
-        echo 'Token inválido ou expirado';
+        echo "<script>alert('Token inválido ou expirado');</script>";
     }
     die();
 }
