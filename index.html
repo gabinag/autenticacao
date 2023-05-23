@@ -23,8 +23,17 @@
 				<input type="password" id="senha" name="senha" required>
 			</div>
 			<div class="g-recaptcha" data-sitekey="6LdjQzAmAAAAAAQUH2TVMrcpjxtRzzN57n9Jn5Sw"></div>
-			<button type="submit" class="btn">Entrar</button>
+			<button type="submit" class="btn" onclick="return valida()">Entrar</button>
 		</form>
 	</div>
+
+	<script type="text/javascript">
+		function valida(){
+			if (grecaptcha.getResponse() == ""){
+				alert("Tem que marcar a caixa caraio");
+				return false;
+			}
+		}
+	</script>
 </body>
 </html>
