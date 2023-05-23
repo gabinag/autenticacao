@@ -1,7 +1,7 @@
 <?php
 if(isset($_POST['enviar'])){
 	if(!empty($_POST['g-recaptcha-response'])){
-		url = "https://www.google.com/recaptcha/api/siteverify";
+		$url = "https://www.google.com/recaptcha/api/siteverify";
 		$secret = "6LdjQzAmAAAAANtpfL1UDc8MjDN09-6_VSLwFY2b";
 		$response = $_POST['g-recaptcha-response'];
 		$variaveis = "secret=".$secret."&response=".$response; 
@@ -15,11 +15,11 @@ if(isset($_POST['enviar'])){
 		curl_exec($ch);
 		$resposta = curl_exec($ch);
 		$resultado = json_decode($resposta);
-			if {
-				if ($resultado->success == 1){
-					echo "Deu certo porraaaaaaaaaa!!! bisnaga wins";
-					}
-				}
-		}	
-	}
+			
+		if ($resultado->success == 1){
+			echo "Deu certo porraaaaaaaaaa!!! bisnaga wins";
+		}
+				
+	}	
+}
 ?>
