@@ -17,8 +17,18 @@ if(isset($_POST['enviar'])){
 		$resultado = json_decode($resposta);
 			
 		if ($resultado->success == 1){
-			echo "Deu certo porraaaaaaaaaa!!! bisnaga wins";
-		}
+			echo "Verificação de recaptcha realizada com sucesso!";
+			
+			$email = $_POST['email'];
+			$senha = $_POST['senha'];
+
+			if ($email == 'teste@teste.com' && $senha == '1234') {
+				header('Location: autenticar.php');
+				exit;
+			} else {
+				echo "<p style='color: red; font-size: 20px;'>Erro! Senha e/ou e-mail incorreto</p>";
+			}
+		}		
 				
 	}	
 }
