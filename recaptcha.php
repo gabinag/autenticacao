@@ -12,7 +12,7 @@ if(isset($_POST['enviar'])){
 		curl_setopt( $ch, CURLOPT_FOLLOWLOCATION, 1);
 		curl_setopt( $ch, CURLOPT_HEADER, 0);
 		curl_setopt( $ch, CURLOPT_RETURNTRANSFER, 1);
-		curl_exec($ch);
+		
 		$resposta = curl_exec($ch);
 		$resultado = json_decode($resposta);
 			
