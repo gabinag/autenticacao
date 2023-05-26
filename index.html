@@ -7,6 +7,14 @@
 	<link rel="stylesheet" href="style.css">
     <title>Página de Login</title>
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+	<script type="text/javascript">
+		function valida(){
+			if (grecaptcha.getResponse() == ""){
+				alert('ERRO! Selecione a opção "Não sou um robô"');
+				return false;
+			}
+		}
+	</script>
 </head>
 <body>
     <div class="container">
@@ -27,13 +35,6 @@
 		</form>
 	</div>
 
-	<script type="text/javascript">
-		function valida(){
-			if (grecaptcha.getResponse() == ""){
-				alert('ERRO! Selecione a opção "Não sou um robô"');
-				return false;
-			}
-		}
-	</script>
+	
 </body>
 </html>
